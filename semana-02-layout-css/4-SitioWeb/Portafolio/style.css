@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paddingsecciones: 30px 0;
+}
+
+
+body {
+    height: 100vh;
+    background-color: #CCFFFF;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* Header */
+
+header.contenedor {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #BC2CC2;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+
+
+.contenedor li {
+    display: inline-block;
+    margin: 20px;
+}
+
+
+/* A.rticle */
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+article {
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-self: center;
+    padding: 0.5rem;
+    flex: 1
+}
+
+.imagen-principal img {
+    min-width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+}
+
+.seccion1 {
+    display: block;
+    align-self: center;
+    width: 30rem;
+
+}
+
+.seccion1 h1,
+h2 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.seccion1 h1 {
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+p{
+    font-size: 20px;
+    text-align:center;
+    margin: 15px;
+}
+p > a{
+    font-size: 20px;
+} 

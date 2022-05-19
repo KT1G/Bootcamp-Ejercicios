@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+
+    /* header */
+}
+header{
+    text-align: center;
+    background-color: rgb(106, 163, 255);
+    color: aliceblue;
+    
+}
+
+h1{
+    padding: 1rem;
+    font-size: 40px;
+    
+}
+/* secciones */
+
+section {
+    margin: 2rem;
+}
+
+section > h2{
+    color: rgb(81, 133, 255);
+    margin-left: 2px;
+}
+
+
+section.seccion1 > h2{ /* materiales */
+    margin: 10px;
+    position: relative;
+    left: -10px;
+
+}
+section.seccion2 > h2{  /* horario */
+    margin-bottom: 10px;
+}
+
+
+/* lista materiales */
+
+
+ul{
+    list-style: circle;
+    margin-left:30px;
+    
+}
+
+ul li{
+    margin:5px;
+    
+}
+
+li.importante{
+    text-decoration:underline;
+    font-weight:bold;    
+     
+}
+
+table{
+    margin-left: 20px;
+    border-collapse: collapse;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* tabla */
+table th ,td{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 0.8rem;
+}
+
+thead tr th{
+    background-color:#4083ff;
+    color: white;
+    font-size: 16px;
+}
+
+tbody th {
+    background-color: #97BCFF;
+
+}
+table tbody tr:nth-child(even){
+  background-color:#A4C4FF;
+}
+
+tbody tr:first-child td{
+    background-color: #E5EEFF;
+}
+#descanso{
+    background-color: #E5EEFF;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    text-transform: uppercase;
+
+}
+.color{
+    background-color: #84A5DF;
+}

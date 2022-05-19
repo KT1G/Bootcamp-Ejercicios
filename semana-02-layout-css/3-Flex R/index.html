@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio Flex</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <form action="#" method="get">
+    <fieldset>
+      <legend> PERSONALIZA TU HAMBURGUESA</legend>
+      <div>
+        <h2>Ingredientes</h2>
+      </div>
+      <ul class="ingredientes">
+        <li>
+          <label for="que">Queso</label>
+          <input type="checkbox" name="queso" id="que">
+        </li>
+
+        <li>
+          <label for="peper">Pimiento</label>
+          <input type="checkbox" name="Pimiento" id="peper">
+        </li>
+
+        <li>
+          <label for="onion">Cebolla</label>
+          <input type="checkbox" name="Cebolla" id="onion">
+        </li>
+
+        <li>
+          <label for="jam">Jamon</label>
+          <input type="checkbox" name="Jamon" id="jam">
+        </li>
+
+        <li>
+          <label for="egg">Huevo</label>
+          <input type="checkbox" name="Huevo" id="egg">
+        </li>
+
+      </ul>
+        <div>
+          <h2>Tamaño</h2>
+        </div>
+      <ul class="tamaño">
+        
+        <li>
+          <label for="small">Pequeña</label>
+          <input type="radio" name="tamaño" id="small" value="small">
+        </li>
+        <li>
+          <label for="mid">Mediana</label>
+          <input type="radio" name="tamaño" id="mid" value="medium">
+        </li>
+        <li><label for="big">Grande</label>
+          <input type="radio" name="tamaño" id="big" value="big">
+        </li>
+      </ul>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>DATOS DE ENTREGA</legend>
+      <ul class="datos">
+        <li>
+          <label for="name">Nombre</label>
+          <input type="text" name="Nombre" id="name" required placeholder="Samuel Rodriguez">
+        </li>
+        <li>
+          <label for="dir">Direccion</label>
+          <input type="text" name="Direccion" id="dir" required placeholder="Rual Real, 1, A Coruña">
+        </li>
+        <li>
+          <label for="pho">Telefono</label>
+          <input type="tel" name="telefono" id="pho" required placeholder="919 04 23 62">
+        </li>
+        <li>
+          <label for="inst">Instrucciones especiales</label>
+          <textarea name="instrucciones" id="inst" cols="30" rows="10" placeholder="Sin tomate"></textarea>
+        </li>
+      </ul>
+
+
+    </fieldset>
+    <fieldset class="pago">
+      <legend>MÉTODO DE PAGO</legend>
+      <label for="tar"></label>
+      <select name="metodo de pago" id="tar">
+        <option value="Tarjeta">Tarjeta de credito</option>
+        <option value="Efectivo">Efectivo</option>
+      </select>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+
+</html>
