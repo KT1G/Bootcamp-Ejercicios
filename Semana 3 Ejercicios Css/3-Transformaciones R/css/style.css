@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.contenedor {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 10rem;
+    height: 10rem;
+}
+
+h1 {
+    position: absolute;
+    top: 3.5rem;
+    left: 2.5rem;
+    z-index: -1;
+}
+
+
+.contenedor > div {
+    width: 5rem;
+    height: 5rem;
+  
+}
+
+
+.rojo {
+    background-color: red;
+    text-indent: -999em;
+    overflow: hidden;
+    
+}
+
+.amarillo {
+    background-color: yellow;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+.azul {
+    background-color: blue;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+.verde {
+    background-color: green;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+
+/* ANIMACION */
+.rojo{
+    transition: transform 500ms;
+    transform-origin: top left;
+}
+.azul{
+    transition: transform 500ms;
+    transform-origin: bottom left;
+}
+
+.amarillo{
+    transition: transform 500ms;
+    transform-origin: top right;
+}
+.verde{
+    transition: transform 500ms;
+    transform-origin: bottom right;
+}
+
+
+.contenedor:hover .rojo {
+     transform: rotate(90deg) ;
+     
+}
+
+.contenedor:hover .azul {
+     transform: rotate(-90deg) ;
+     
+}
+
+.contenedor:hover .amarillo {
+     transform: rotate(-90deg) ;
+     
+}
+.contenedor:hover .verde {
+     transform: rotate(90deg) ;
+     
+}
+
+
+
