@@ -48,8 +48,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
- 
+
+
 }
 
 .section1 {
@@ -101,7 +101,7 @@ img.hidden {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    
+
 }
 
 
@@ -114,23 +114,25 @@ img.hidden {
     }
 
     ;
+
     section {
         display: flex;
         justify-content: center;
         text-align: center;
 
     }
-    aside{
+
+    aside {
         text-align: center;
     }
 
     img.hidden {
-    display:flex ;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    margin-bottom: 20px;   
-}
+        display: flex;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
 
     aside h2 {
         font-size: 3rem;
