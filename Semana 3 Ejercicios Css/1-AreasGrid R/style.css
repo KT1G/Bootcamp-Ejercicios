@@ -98,6 +98,12 @@ li {
 
 img.hidden {
     display: none;
+<<<<<<< HEAD
+=======
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+>>>>>>> 8b808b5cd77387e5be2b5bafd2115e846f808225
 
 }
 
@@ -120,16 +126,22 @@ img.hidden {
 
     }
 
+<<<<<<< HEAD
 
     section>p,
     h2 {
         max-width: 600px;
         text-align: left;
         margin: 0.5rem auto;
+=======
+    aside {
+        text-align: center;
+>>>>>>> 8b808b5cd77387e5be2b5bafd2115e846f808225
     }
 
     img.hidden {
         display: flex;
+<<<<<<< HEAD
         width: 16vw;
         height: 16vw;
         border-radius: 50%;
@@ -144,6 +156,12 @@ img.hidden {
         display: flex;
 
 
+=======
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        margin-bottom: 20px;
+>>>>>>> 8b808b5cd77387e5be2b5bafd2115e846f808225
     }
 
     aside h2 {

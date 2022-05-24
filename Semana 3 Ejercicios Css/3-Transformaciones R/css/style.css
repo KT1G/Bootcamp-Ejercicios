@@ -20,7 +20,7 @@ body {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    
+
     width: 10rem;
     height: 10rem;
 }
@@ -33,10 +33,10 @@ h1 {
 }
 
 
-.contenedor > div {
+.contenedor>div {
     width: 5rem;
     height: 5rem;
-  
+
 }
 
 
@@ -44,7 +44,7 @@ h1 {
     background-color: red;
     text-indent: -999em;
     overflow: hidden;
-    
+
 }
 
 .amarillo {
@@ -67,43 +67,43 @@ h1 {
 
 
 /* ANIMACION */
-.rojo{
+.rojo {
     transition: transform 500ms;
     transform-origin: top left;
 }
-.azul{
+
+.azul {
     transition: transform 500ms;
     transform-origin: bottom left;
 }
 
-.amarillo{
+.amarillo {
     transition: transform 500ms;
     transform-origin: top right;
 }
-.verde{
+
+.verde {
     transition: transform 500ms;
     transform-origin: bottom right;
 }
 
 
 .contenedor:hover .rojo {
-     transform: rotate(90deg) ;
-     
+    transform: rotate(90deg);
+
 }
 
 .contenedor:hover .azul {
-     transform: rotate(-90deg) ;
-     
+    transform: rotate(-90deg);
+
 }
 
 .contenedor:hover .amarillo {
-     transform: rotate(-90deg) ;
-     
+    transform: rotate(-90deg);
+
 }
+
 .contenedor:hover .verde {
-     transform: rotate(90deg) ;
-     
+    transform: rotate(90deg);
+
 }
-
-
-
