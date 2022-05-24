@@ -48,8 +48,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
- 
+
+
 }
 
 .section1 {
@@ -98,15 +98,13 @@ li {
 
 img.hidden {
     display: none;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    
+
 }
 
 
 @media (min-width: 680px) {
     body {
+
         grid-template-areas: "header header header"
             "seccion1 seccion2 aside"
             "seccion1 seccion2 aside"
@@ -114,27 +112,44 @@ img.hidden {
     }
 
     ;
+
     section {
         display: flex;
         justify-content: center;
         text-align: center;
 
     }
-    aside{
-        text-align: center;
+
+
+    section>p,
+    h2 {
+        max-width: 600px;
+        text-align: left;
+        margin: 0.5rem auto;
     }
 
     img.hidden {
-    display:flex ;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    margin-bottom: 20px;   
-}
+        display: flex;
+        width: 16vw;
+        height: 16vw;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+
+
+
+    }
+
+    aside {
+        display: flex;
+
+
+    }
 
     aside h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         width: 100%;
+        text-align: center;
     }
 
 
