@@ -1,29 +1,36 @@
 "use strict";
 
 // puntuaciones
-const puntuaciones = [{
+const puntuaciones = [
+  {
     equipo: "Toros Negros",
     puntos: [1, 3, 4, 2, 10, 8],
+    casa: true,
   },
   {
     equipo: "Amanecer Dorado",
     puntos: [8, 5, 2, 4, 7, 5, 3],
+    casa: true,
   },
   {
     equipo: "Águilas Plateadas",
     puntos: [5, 8, 3, 2, 5, 3],
+    casa: true,
   },
   {
     equipo: "Leones Carmesí",
     puntos: [5, 4, 3, 1, 2, 3, 4],
+    casa: true,
   },
   {
     equipo: "Rosas Azules",
     puntos: [2, 1, 3, 1, 4, 3, 4],
+    casa: true,
   },
   {
     equipo: "Mantis Verdes",
     puntos: [1, 4, 5, 1, 3],
+    casa: true,
   },
   {
     equipo: "Ciervos Celestes",
@@ -43,10 +50,30 @@ const puntuaciones = [{
 
 
 
+const mejoresEquipos = {}
+
+
+puntuaciones.forEach(equipos => {
+
+  const { equipo, puntos } = equipos
+
+  
+ }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* 
 const MejorPeor = (puntuaciones) => {
 
 const todo = puntuaciones.map((arr) => {
@@ -70,7 +97,7 @@ const puntuacionesOrdenadas = todo.sort((a, b) => b.puntos - a.puntos);
 
 console.log(MejorPeor(puntuaciones))
 
-
+ */
 
 
 
