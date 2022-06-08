@@ -5,36 +5,43 @@ const puntuaciones = [
   {
     equipo: "Toros Negros",
     puntos: [1, 3, 4, 2, 10, 8],
-    casa: true,
+    casa: "true",
+    lasuma: "la suma1",
   },
   {
     equipo: "Amanecer Dorado",
     puntos: [8, 5, 2, 4, 7, 5, 3],
     casa: true,
+    lasuma: "la suma2",
   },
   {
     equipo: "Águilas Plateadas",
     puntos: [5, 8, 3, 2, 5, 3],
     casa: true,
+    lasuma: "la suma3",
   },
   {
     equipo: "Leones Carmesí",
     puntos: [5, 4, 3, 1, 2, 3, 4],
     casa: true,
+    lasuma: "la suma4",
   },
   {
     equipo: "Rosas Azules",
     puntos: [2, 1, 3, 1, 4, 3, 4],
     casa: true,
+    lasuma: "la suma5",
   },
   {
     equipo: "Mantis Verdes",
     puntos: [1, 4, 5, 1, 3],
     casa: true,
+    lasuma: "la suma6",
   },
   {
     equipo: "Ciervos Celestes",
     puntos: [3, 5, 1, 1],
+    lasuma: "la suma7",
   },
   {
     equipo: "Pavos Reales Coral",
@@ -48,33 +55,91 @@ const puntuaciones = [
 
 
 
+const mejorPeorEquipo = (arr) => {
+
+  const equiposSuma = {}
+
+    arr.forEach(el => {
+
+    const { equipo, puntos } = el;
+    
+    const sumaPuntos = puntos.reduce((a, b) => a + b) // suma los puntos de cada equipo
+    
+      equiposSuma[equipo] ??= 0
+     
+      equiposSuma[equipo] += sumaPuntos
+    
+    });
+  
+  
+  
+  const mejorPeorEquipo = Object
+    .entries(equiposSuma) 
+    .sort((a, b) => b[1] - a[1]) // ordenar de mayor a menor
+
+  
+  const mejorEquipo = mejorPeorEquipo.shift()
+  const peorEquipo = mejorPeorEquipo.pop()
+    
+  console.log(`El mejor equipo es ${mejorEquipo[0]} con ${mejorEquipo[1]} puntos y el peor equipo es ${peorEquipo[0]} con ${peorEquipo[1]} puntos`)  
+  };
 
 
-const mejoresEquipos = {}
+console.log(mejorPeorEquipo(puntuaciones))  
+
+
+
+
+
+
+
+
+
+
+
+
+/* const mejoresEquipos = {}
 
 
 puntuaciones.forEach(equipos => {
 
-  const { equipo, puntos } = equipos
-
+  const { equipo, puntos} = equipos
   
+
+
+  const sumaPuntos = puntos.reduce((a, b) => a + b)
+
+  mejoresEquipos[equipo] ??= 0
+  
+  mejoresEquipos[equipo] += sumaPuntos 
+  
+  
+ 
  }
+  
+)
+
+const ordenados = Object
+  .entries(mejoresEquipos)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 3)
+  .map(equipo => equipo[0])
+
+
+
+  console.log(ordenados)
+ 
+ */
+  
+
+ 
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-/* 
-const MejorPeor = (puntuaciones) => {
+ const MejorPeor = (puntuaciones) => {
 
 const todo = puntuaciones.map((arr) => {
   return {
@@ -82,11 +147,14 @@ const todo = puntuaciones.map((arr) => {
     puntos: arr.puntos.reduce((a, b) => a + b, 0),
   };
 });
+  
+  console.log(todo)
 
 const puntuacionesOrdenadas = todo.sort((a, b) => b.puntos - a.puntos);
 
 
   let mejorEquipo = puntuacionesOrdenadas.shift();
+  console.log(mejorEquipo)
   
   
   let peorEquipo = puntuacionesOrdenadas.pop();
@@ -95,11 +163,9 @@ const puntuacionesOrdenadas = todo.sort((a, b) => b.puntos - a.puntos);
 
 }
 
-console.log(MejorPeor(puntuaciones))
+console.log(MejorPeor(puntuaciones)) 
 
- */
-
-
+  
 
 
 
@@ -108,7 +174,8 @@ console.log(MejorPeor(puntuaciones))
 
 
 
-  /*   function MejorPeor(arr) {
+
+   /*   function MejorPeor(arr) {
 
       let MejorYPeor = []
 
@@ -125,6 +192,8 @@ console.log(MejorPeor(puntuaciones))
           puntos: suma,
         });
       }
+
+      console.log(MejorYPeor)
       let equiposPuntos = MejorYPeor.sort((a, b) => b.puntos - a.puntos);
       let mejorEquipo = (equiposPuntos.shift())
       let peorEquipo = (equiposPuntos.pop())
@@ -132,13 +201,12 @@ console.log(MejorPeor(puntuaciones))
       return `El equipo con más puntos es ${mejorEquipo.equipo} con ${mejorEquipo.puntos} puntos. El equipo con menos puntos es ${peorEquipo.equipo} con ${peorEquipo.puntos} puntos.`
     }
 
-    console.log(MejorPeor(puntuaciones))
+    console.log(MejorPeor(puntuaciones)) */
 
 
 
- */
+ 
 
 
 
-    // 1. Crea una función que reciba un array de objetos puntuaciones y devuelva un array con los equipos que han obtenido más puntos.
-    // La función debe devolver el nombre del equipo y el número de puntos.
+    

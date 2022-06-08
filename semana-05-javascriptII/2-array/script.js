@@ -38,16 +38,21 @@ const eliminaDuplicados = (arr) => {
   return unicos;
 };
 
+
 console.log(eliminaDuplicados(names));
 
 
-// OPCION 2
+
+// console.log(eliminaDuplicados(names));
 
 
-const sacarUnicos = (arr) => {
+// // OPCION 2
 
-  return arr.filter((valor, indice) => { return arr.indexOf(valor) == indice})
 
-} 
+// const sacarUnicos = (arr) => {
 
-sacarUnicos(names)
+//   return arr.filter((valor, indice) => { return arr.indexOf(valor) == indice})
+
+// } 
+
+// sacarUnicos(names)

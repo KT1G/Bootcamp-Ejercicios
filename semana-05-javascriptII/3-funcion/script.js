@@ -2,24 +2,19 @@
 
 
 
-const generarContraseña = () => {
 
-    const min = 0
-    const max = 100
-
-    return Math.floor(Math.random() * (max - min)) + min
-
-}
+const generarContraseña = (min, max) => Math.floor(Math.random() * (max - min)) + min
 
 
 
-function comprobarIgualdad() {
 
-    const contraseña2 = generarContraseña()
+function comprobarIgualdad(tries) {
 
-    for (let i = 0; i < 3; i++) {
+    const contraseña2 = generarContraseña(0,100)
 
-        if (i === 2) {
+    for (let i = 0; i < tries; i++) {
+
+        if (i === tries - 1) {
             alert("Ultimo intento!")
         }  
 
@@ -30,7 +25,7 @@ function comprobarIgualdad() {
 
         if (contraseña == contraseña2) {
             alert("has ganado!")
-            break;
+            return
 
         } else if (contraseña > contraseña2) {
             alert("Tu contraseña es mayor")
@@ -45,6 +40,6 @@ function comprobarIgualdad() {
 
 }
 
-comprobarIgualdad()
+comprobarIgualdad(5)
 
 alert("Fin del juego")
