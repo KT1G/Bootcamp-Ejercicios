@@ -1,30 +1,45 @@
 "use strict";
 
-const letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"]
+  const letras = 
+[ "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B",   "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"]
 
 
-const dni = prompt("Introduce tu Dni debe ser del siguiente formato 0000000-X")
+function validarDNI(dni){
+  try {
+     if(dni.length !== 10 || typeof dni !== "string"){
+    throw new Error("Formato incorrecto: debe tener 10 caracteres")
+  }
 
+  const dniArr = dni.split("-")
 
+  if(dniArr.length !== 2){
+    throw new Error("El número y la letra deben estar separados por un guion")
+  }
 
-function ComprobarDni(dni) {
+  const [nums, letra] = dniArr;
 
+  if(nums.length !== 8 || isNaN(nums)){
+    throw new Error("La primera parte deben ser 8 numeros")
+  }
 
-  const dniSinLetra = dni.split("-")[0]
-  const letraDni = dni.split("-")[1]
-  const letra = letras.find((l, i) => i === dniSinLetra % 23).toLowerCase()
+  if(letra.length !== 1 || !isNaN(letra)){
+    throw new Error("La segunda parte debe ser una letra")
+  }
 
+/*   console.log(nums % 23)
+  console.log(letras[nums % 23])
+  console.log(letra) */
 
+  if(letra.toUpperCase() !== letras[nums % 23]){
+    throw new Error("DNI no válido")
+  }
 
+  console.log("DNI válido")
 
-  if (dni.length !== 10) return console.error("Debes introducir un Dni con el siguiente formato 0000000-X")
-  if (isNaN(letraDni)) return console.error("Debes introducir un Dni con letra al final") // 4 =="4"(True), "a" == tipo numero?"a" (false)
-  if (dniSinLetra != dniSinLetraNum) return console.error("Debes introducir un Dni con 8 numeros") // 4 != "4" (false) , "a" != tipo numero?"a" (true)
-
-  if (letra !== letraDni) return console.error("la letra no es correcta")
-
-
-
-
+  } catch (error) {
+    console.error(error.message)
+  }
+ 
 }
-ComprobarDni(dni)
+
+validarDNI("61509402-l")

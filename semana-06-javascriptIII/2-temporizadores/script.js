@@ -16,41 +16,28 @@ let segundos = 0;
 const time = setInterval(() => {
 
 
-    segundos += 5;
-    let minutos = Math.floor(segundos / 60);
-    let horas = Math.floor(minutos / 60);
+    segundos += 5 ;
+    let minutos = Math.floor(segundos / 60) ;
+    let horas = Math.floor(minutos / 60) ;
     let dias = Math.floor(horas / 24);
 
-    let min = ""
-    let seg = ""
-    let hor = ""
-    let dia = ""
 
-    if (minutos === 1) {
-        min = " minuto"
-    } else {
-        min = " minutos"
-    }
-    if (segundos === 1) {
-        seg = " segundo"
-    } else {
-        seg = " segundos"
-    }
-    if (horas === 1) {
-        hor = " hora"
-    } else {
-        hor = " horas"
-    }
-    if (dias === 1) {
-        dia = " dia"
-    } else {
-        dia = " dias"
+
+
+    function plural(num) {
+        if (num > 1) {
+            return "s"
+        } else {
+            return ""
+        }
     }
 
 
 
 
-    console.log(`han pasado ${dias} ${dia}, ${horas % 24} ${hor}, ${minutos % 60} ${min} y ${segundos % 60}${seg} desde la ejecucion`);
+    console.log(
+        `han pasado ${dias % 24 } dia${plural(dias)}, ${horas % 60} hora${plural(horas)}, ${minutos % 60} minuto${plural(minutos)} y ${segundos % 60} segundo${plural(segundos)} desde la ejecucion`
+    );
 
 
 }, 5000);
@@ -58,7 +45,7 @@ const time = setInterval(() => {
 
 
 function pararTiempo(num, letra) {
-    let tiempo
+    let tiempo = num
     let segundos = 1000
 
     if (letra === "S") {
