@@ -9,16 +9,29 @@ body {
     align-items: center;
     justify-items: center;
     height: 100vh;
+    
 }
 
 section {
     display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
-    
-    
+    grid-gap: 10px;  
 }
 
 div {
     height: 150px;
+}
+
+button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    position : absolute;
+    top : 150px;
+    left : 25rem;
 }
