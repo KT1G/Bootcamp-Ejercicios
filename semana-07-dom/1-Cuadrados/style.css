@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    
+    
+}
+
+div {
+    height: 150px;
+}
