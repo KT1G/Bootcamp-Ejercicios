@@ -8,41 +8,31 @@ function aleatoryColor() {
     return num
 }
 
-aleatoryColor()
-
-
 
 function createBox() { 
     const container = document.querySelector("section")
-    const box = document.createElement("div")
-   
+    const box = document.createElement("div")  
     container.appendChild(box)
 
 }
 
-function addBox() { 
-    const button = document.querySelector("button")
-    button.addEventListener("click", () => {
-        createBox()
-        colorBox()
-        
-        
-    })
-}
-
-window.addEventListener("load", addBox)
-
-
 
 function colorBox() {
     const box = document.querySelectorAll("div")
-        box.forEach(box => {
-            box.style.background = `rgb(${aleatoryColor()}, ${aleatoryColor()}, ${aleatoryColor()})`
-        })
+    box.forEach(box => {
+        box.style.background = `rgb(${aleatoryColor()}, ${aleatoryColor()}, ${aleatoryColor()})`
+    })
     
 }
 
 setInterval(colorBox, 1000)
 
+
+function addBox() { 
+    const button = document.querySelector("button")
+    button.addEventListener("click", createBox, colorBox)
+}
+
+window.addEventListener("load", addBox)
 
 

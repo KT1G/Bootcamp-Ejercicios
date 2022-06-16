@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     
 }
 
@@ -9,6 +10,7 @@ body {
     align-items: center;
     justify-items: center;
     height: 100vh;
+    gap: 40px;
     
 }
 
@@ -28,10 +30,9 @@ button{
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
     cursor: pointer;
-    width: 10%;
-    position : absolute;
-    top : 150px;
-    left : 25rem;
+    width: 10rem;
+    position : relative;
+    top : 15px;
+    left : 1rem;
 }
