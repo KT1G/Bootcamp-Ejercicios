@@ -252,15 +252,12 @@ console.log(matriculasEspanoles)
 //- 6. Obtén un array con las personas que tengan un coche de la marca Ford.
 
  
-/* const cochesFordId = cars
+ const cochesFordId = cars
   .filter(c => c.brand === "Ford")
   .map(c => persons.find(p => p.car === c.id ))
 
 
-
-const personas = persons.map
-
-  */
+  
 
 // 7. ¡Bonus point! Obtén un array con todas las personas en el que cada persona tenga toda
  
