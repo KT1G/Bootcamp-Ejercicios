@@ -24,6 +24,7 @@ async function getUsers(num) {
             foto: picture.large
         }
     })
+    console.log("🚀 ~ file: script.js ~ line 27 ~ getUsers ~ users", users)
 
     return usersInfo
 

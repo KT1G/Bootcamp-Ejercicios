@@ -12,7 +12,7 @@ const span = document.querySelector("span")
 let openCard = 0
 let tries = 0
 
-console.log(nums)
+
 
 
 li.forEach(el => {  // recorremos todas las cartas
@@ -36,6 +36,7 @@ function printNum(e) { // funcion que imprime el numero de la carta
     console.log(openCard)
 
     validateCard();
+  
 
 }
 
